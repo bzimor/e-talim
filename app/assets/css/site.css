@@ -1,0 +1,81 @@
+html,
+body {
+	height: 100%;
+}
+
+.wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
+}
+
+.wrap > .container {
+	padding: 20px 15px 20px;
+}
+
+.footer {
+	height: 60px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	padding-top: 20px;
+}
+
+.jumbotron {
+	text-align: center;
+	background-color: transparent;
+}
+
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
+
+.not-set {
+	color: #c55;
+	font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+thead:first-child > tr:first-child a {
+	position: absolute;
+	bottom: 0px;
+	right: 8px;
+	display: block;
+	font-family: 'Font Awesome 5 Free';
+	opacity: 0.7;
+	color: #333;
+}
+thead:first-child > tr:first-child a:after {
+	content: "\f0dc";
+	opacity: 0.2;
+}
+thead:first-child > tr:first-child a.asc:after {
+	content: "\f0dd";
+}
+thead:first-child > tr:first-child a.desc:after {
+	content: "\f0de";
+}
+
+.grid-view th {
+	white-space: nowrap;
+}
+
+.hint-block {
+	display: block;
+	margin-top: 5px;
+	color: #999;
+}
+
+.error-summary {
+	color: #a94442;
+	background: #fdf7f7;
+	border-left: 3px solid #eed3d7;
+	padding: 10px 20px;
+	margin: 0 0 15px 0;
+}
+
+.permissions {
+	font-size: 16px;
+	cursor: pointer;
+}
