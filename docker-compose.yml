@@ -1,0 +1,28 @@
+version: '3.2'
+
+services:
+
+  dashboard:
+    build: ./docker/apache
+    ports:
+      - 21080:80
+    volumes:
+      - ./docker/apache/sites-enabled:/etc/apache2/sites-enabled
+      - ./lms:/app
+    links:
+      - mysql
+      - memcached
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./docker/storage/mysql:/var/lib/mysql
+      - ./docker/mysql/dump:/docker-entrypoint-initdb.d
+    ports:
+      - 30006:3306
+    environment:
+      - MYSQL_DATABASE=lms
+      - MYSQL_ROOT_PASSWORD=cX7m66n6KSs0
+
+  memcached:
+    image: memcached:latest

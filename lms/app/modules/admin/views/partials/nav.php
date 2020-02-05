@@ -55,17 +55,17 @@ use app\modules\admin\widgets\Menu;
                     ['label' => 'ASOSIY KONTENT', 'url' => FALSE, 'options' => ['class' => 'nav-header']],
                     [
                         'label' => 'Videolar',
-                        'url' => '/admin/content/index',
+                        'url' => Yii::$app->urlManager->createUrl('/admin/content/index'),
                         'icon' => 'fas fa-play',
                     ],
                     [
                         'label' => 'Playlistlar',
-                        'url' => '/admin/playlist/index',
+                        'url' => Yii::$app->urlManager->createUrl('/admin/playlist/index'),
                         'icon' => 'fas fa-list-alt',
                     ],
                     [
                         'label' => 'Kategoriyalar',
-                        'url' => '/admin/category/index',
+                        'url' => Yii::$app->urlManager->createUrl('/admin/category/index'),
                         'icon' => 'fas fa-folder-open',
                     ],
 					
