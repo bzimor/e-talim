@@ -13,6 +13,7 @@ $config = [
 	'runtimePath'   => dirname(__DIR__) . '/runtime',
 	'vendorPath'   => dirname(__DIR__) . '/vendor',
 	'bootstrap'  => ['log', 'settings'],
+    'language' => 'uz-UZ',
 	'aliases'    => [
 		'@config'=> '@app/../config',
 		'@bower' => '@vendor/bower-asset',
@@ -54,7 +55,7 @@ $config = [
 		'cache' => [
 			'class' => \yii\caching\FileCache::class,
 		],
-		/*
+
 		'i18n' => [
 			'translations' => [
 				'app*' => [
@@ -66,7 +67,7 @@ $config = [
 				],
 			],
 		],
-		*/
+
 		'assetManager' => [
 			'forceCopy' => YII_DEBUG,
 		],
