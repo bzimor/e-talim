@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\modules\admin\models\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Kategoriyalar');
+$this->title = Yii::t('app', 'Categories');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="content-category-index">
@@ -16,14 +16,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Kategoriya yaratish'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Add'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'summary' => "Jami {totalCount} tadan {begin} - {end} lar",
-        'emptyText' => 'Hech narsa mavjud emas',
+        'emptyText' => 'List is empty',
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 

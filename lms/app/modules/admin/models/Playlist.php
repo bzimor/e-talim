@@ -70,15 +70,15 @@ class Playlist extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Nomi'),
-            'description' => Yii::t('app', 'Tavsifi'),
-            'category_id' => Yii::t('app', 'Kategoriya'),
+            'name' => Yii::t('app', 'Name'),
+            'description' => Yii::t('app', 'Description'),
+            'category_id' => Yii::t('app', 'Category'),
             'status' => Yii::t('app', 'Status'),
-            'sort_order' => Yii::t('app', 'Tartibi'),
-            'created_by' => Yii::t('app', 'Muallif'),
+            'sort_order' => Yii::t('app', 'Sort'),
+            'created_by' => Yii::t('app', 'Author'),
             'is_deleted' => Yii::t('app', 'Is Deleted'),
-            'created_at' => Yii::t('app', 'Yaratildi'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'created_at' => Yii::t('app', 'CreatedAt'),
+            'updated_at' => Yii::t('app', 'UpdatedAt'),
         ];
     }
 

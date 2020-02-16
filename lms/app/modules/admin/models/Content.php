@@ -87,19 +87,19 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Nomi'),
-            'description' => Yii::t('app', 'Tavsifi'),
-            'photo' => Yii::t('app', 'Rasm'),
-            'file' => Yii::t('app', 'Fayl'),
-            'youtube_url' => Yii::t('app', 'Youtube linki'),
-            'playlist_id' => Yii::t('app', "Ko'rsatuv"),
-            'duration' => Yii::t('app', 'Davomiyligi'),
+            'name' => Yii::t('app', 'Name'),
+            'description' => Yii::t('app', 'Description'),
+            'photo' => Yii::t('app', 'Photo'),
+            'file' => Yii::t('app', 'File'),
+            'youtube_url' => Yii::t('app', 'YoutubeUrl'),
+            'playlist_id' => Yii::t('app', "PlaylistID"),
+            'duration' => Yii::t('app', 'Duration'),
             'status' => Yii::t('app', 'Status'),
-            'created_by' => Yii::t('app', 'Muallif'),
+            'created_by' => Yii::t('app', 'Author'),
             'is_deleted' => Yii::t('app', 'Is Deleted'),
-            'created_at' => Yii::t('app', 'Created At'),
-            'updated_at' => Yii::t('app', 'Updated At'),
-            'published_at' => Yii::t('app', 'Chop etildi'),
+            'created_at' => Yii::t('app', 'CreatedAt'),
+            'updated_at' => Yii::t('app', 'UpdatedAt'),
+            'published_at' => Yii::t('app', 'PublishedAt'),
         ];
     }
 

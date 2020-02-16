@@ -90,15 +90,15 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Nomi'),
+            'name' => Yii::t('app', 'Name'),
             'slug' => Yii::t('app', 'Slug'),
-            'description' => Yii::t('app', 'Tavsifi'),
-            'photo' => Yii::t('app', 'Rasm'),
-            'parent_id' => Yii::t('app', 'Parent ID'),
+            'description' => Yii::t('app', 'Description'),
+            'photo' => Yii::t('app', 'Photo'),
+            'parent_id' => Yii::t('app', 'ParentID'),
             'status' => Yii::t('app', 'Status'),
             'is_deleted' => Yii::t('app', 'Is Deleted'),
-            'created_at' => Yii::t('app', 'Yaratildi'),
-            'updated_at' => Yii::t('app', 'Updated At'),
+            'created_at' => Yii::t('app', 'CreatedAT'),
+            'updated_at' => Yii::t('app', 'UpdatedAt'),
         ];
     }
 
