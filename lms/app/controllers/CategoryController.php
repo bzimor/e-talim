@@ -3,18 +3,13 @@
 namespace app\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Response;
-use yii\filters\VerbFilter;
-use app\forms\LoginForm;
-use app\forms\ContactForm;
-
 use app\modules\admin\models\Content;
 use app\modules\admin\models\Playlist;
 use app\modules\admin\models\Category;
 
 class CategoryController extends Controller
 {
+	public $layout = 'category';
 	/**
 	 * @inheritdoc
 	 */
@@ -38,8 +33,7 @@ class CategoryController extends Controller
 	 */
 	public function actionIndex()
 	{
-
-		return $this->render('category', [
+		return $this->render('index', [
             'contents' => Content::find()->published()->all(),
             'categories' => Category::find()->active()->noParents()->all(),
             'playlist' => Playlist::find()->active()->all(),
@@ -56,8 +50,7 @@ class CategoryController extends Controller
 	{
         if ($category = Category::find()->where(['slug' => $name, 'status' => Category::STATUS_ACTIVE])->one()) {
             
-            $this->active_menu = $category->slug;        
-            
+//            $this->active_menu = $category->slug;
             return $this->render('item', [
                 'playlist_items' => Content::getContentsByCategory($category->id),
                 'playlists' => Playlist::find()->where(['category_id' => $category->id])->orderBy(['sort_order' => SORT_ASC, 'name' => SORT_ASC])->active()->all(),

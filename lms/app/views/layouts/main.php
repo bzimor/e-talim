@@ -4,12 +4,13 @@
 
 /* @var $content string */
 
+use app\assets\MainAssetBundle;
 use app\widgets\FlashAlert;
 use yii\helpers\Html;
 use yii\bootstrap4\Breadcrumbs;
-use app\assets\AssetBundle;
+//use app\assets\AssetBundle;
 
-AssetBundle::register($this);
+MainAssetBundle::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -35,8 +36,8 @@ AssetBundle::register($this);
 			'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
 		]) ?>
 		<?= FlashAlert::widget() ?>
-		<?= $content ?>
 	</div>
+	<?= $content ?>
 </div>
 
 <?= $this->render('//partials/footer'); ?>
