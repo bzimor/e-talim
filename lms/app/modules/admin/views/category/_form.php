@@ -25,7 +25,7 @@ use yii\web\JsExpression;
                     <?php echo $form->field($model, 'parent_id')->dropDownList($categories, ['prompt' => '']) ?>
                 </div>
             </div>
-        
+
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
         </div>
